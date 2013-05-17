@@ -23,69 +23,7 @@
  * THE SOFTWARE.
  */
 
-/**
- * Documentation:
- *
- * The ShaderLoader uses AJAX to asychronously load external shader files
- * included in the DOM as script elements using the format:
- * 
- * 		<script data-src="shaders/name/vertex.js"
- * 			data-name="myShader"
- * 			type="x-shader/x-vertex"></script>
- * 
- * 		<script data-src="shaders/name/fragment.js"
- * 			data-name="myShader"
- * 			type="x-shader/x-fragment"></script>
- *
- * Where:
- * 		data-src: Path to the shader file
- * 		data-name: Name of the shader to be used as key in the load object
- * 		type: Shader type ["x-shader/x-vertex" | "x-shader/x-fragment"]
- *
- * 
- * When all loading has completed it will attempt to invoke the passed in
- * onShadersLoaded callback with a parameter "data" containing all loaded
- * shaders.
- * 
- * Callback signature:
- * 		function onShadersLoaded(data)
- * 		{
- *     		// Do stuff with "data" load object
- * 		}
- * 
- * Shaders load object structure:
- * 		data = {
- * 			"name from data-name": {
- *				vertex: "...",
- *				fragment: "..."
- *			},
- * 			{...}
- * 		};
- * 
- * Full example:
- *	[index.html]:
- * 		<script data-src="shaders/particles/vertex.js" data-name="particles"
- * 			type="x-shader/x-vertex"></script>
- *		<script data-src="shaders/particles/fragment.js" data-name="particles"
- *			type="x-shader/x-fragment"></script>
- * 
- * 		<script data-src="shaders/world/vertex.js" data-name="world"
- * 			type="x-shader/x-vertex"></script>
- *		<script data-src="shaders/world/fragment.js" data-name="world"
- *			type="x-shader/x-fragment"></script>
- *
- *	[example.js]:
- *		var onShadersLoaded = function (data)
- * 		{
- *			var particlesVertexShader = data.particles.vertex;
- *			var particlesFragmentShader = data.particles.fragment;
- * 
- *			var worldVertexShader = data.world.vertex;
- *			var worldFragmentShader = data.world.fragment;
- * 		};
- *
- * 		SHADER_LOADER.load(onShadersLoaded);
- */
+// Documentation: https://github.com/codecruzer/webgl-shader-loader-js/blob/master/README.md
 
 var SHADER_LOADER = SHADER_LOADER || {};
 
