@@ -1,5 +1,5 @@
 /**
- * ShaderLoader.js
+ * ShaderLoader.js v1.0
  * An asynchronous shader loader for WebGL using AJAX with jQuery.
  *
  * Copyright (c) 2013 - 2014 Andre Cruz / http://andre-cruz.com
@@ -23,7 +23,10 @@
  * THE SOFTWARE.
  */
 
-// Documentation: https://github.com/codecruzer/webgl-shader-loader-js/blob/master/README.md
+/*
+* Dependencies: jQuery
+* Documentation: https://github.com/codecruzer/webgl-shader-loader-js
+*/
 
 var SHADER_LOADER = SHADER_LOADER || {};
 
